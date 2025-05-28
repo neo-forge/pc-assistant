@@ -1,7 +1,24 @@
-# Tauri + React + Typescript
+# 🖥️ PC Assistant
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+> 一款轻量级的跨平台桌面工具，致力于帮助用户高效管理 **系统信息**、**剪贴板内容** 及其他核心系统资源。
 
-## Recommended IDE Setup
+## 🎯 项目目标概览
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+| 序号 | 功能模块                          | 当前进度  |
+| ---- | --------------------------------- | --------- |
+| 1️⃣   | 系统信息可视化（CPU、内存、网络） | ⏳ 未开始 |
+| 2️⃣   | 剪贴板内容管理（历史、收藏）      | ⏳ 未开始 |
+| 3️⃣   | 系统文件管理（本地浏览、操作）    | ⏳ 未开始 |
+| 4️⃣   | 系统进程管理（查看/终止）         | ⏳ 未开始 |
+| 5️⃣   | 系统网络连接管理（端口/IP）       | ⏳ 未开始 |
+| 6️⃣   | 系统设置集成（快捷入口/配置）     | ⏳ 未开始 |
+| 7️⃣   | 系统日志查看与筛选                | ⏳ 未开始 |
+| 8️⃣   | 系统任务调度管理                  | ⏳ 未开始 |
+| 9️⃣   | 系统消息通知中心（状态聚合）      | ⏳ 未开始 |
+| 🔟   | 桌面通知提醒机制（自定义推送）    | ⏳ 未开始 |
+
+## 📝 使用协议
+
+本项目遵循 [MIT 协议](LICENSE)，可自由使用、修改与分发。
+
+> 后续进度将持续更新，欢迎关注项目开发日志或参与贡献 🙌

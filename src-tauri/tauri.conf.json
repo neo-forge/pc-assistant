@@ -13,8 +13,9 @@
     "windows": [
       {
         "title": "pc-assistant",
-        "width": 800,
-        "height": 600
+        "width": 900,
+        "height": 600,
+        "resizable": false
       }
     ],
     "security": {

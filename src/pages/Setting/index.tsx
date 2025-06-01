@@ -1,17 +1,43 @@
-import { Button, Flex } from "antd";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { Button, Card, Tabs, TabsProps } from "antd";
 
-const Settings = () => {
-  const navigate = useNavigate();
+import General from "../../components/Setting/General";
+import Appearance from "../../components/Setting/Appearance";
+import Notification from "../../components/Setting/Notification";
+import About from "../../components/Setting/About";
+
+const items: TabsProps["items"] = [
+  {
+    key: "1",
+    label: "通用设置",
+    children: <General />,
+  },
+  {
+    key: "2",
+    label: "外观设置",
+    children: <Appearance />,
+  },
+  {
+    key: "3",
+    label: "通知设置",
+    children: <Notification />,
+  },
+  {
+    key: "4",
+    label: "关于",
+    children: <About />,
+  },
+];
+
+const Settings: React.FC = () => {
   return (
-    <Flex>
-      <Button onClick={() => navigate("/")}>返回首页</Button>
-      <Button onClick={() => navigate("/system")}>返回系统管理</Button>
-      <Button onClick={() => navigate("/application")}>返回应用列表</Button>
-      <Button onClick={() => navigate("/login")}>返回登录</Button>
-      <Button onClick={() => navigate("/error/404")}>返回404</Button>
-      <Button onClick={() => navigate("/error/500")}>不存在的页面</Button>
-    </Flex>
+    <Card style={{}} bodyStyle={{ padding: "0 24px" }}>
+      <Tabs
+        defaultActiveKey="1"
+        items={items}
+        tabBarStyle={{ marginBottom: 0 }}
+      />
+    </Card>
   );
 };
 

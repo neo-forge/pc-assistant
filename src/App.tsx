@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ConfigProvider, theme as antdTheme } from "antd";
+import { ConfigProvider, theme as antdTheme, App as AntdApp } from "antd";
 import zhCN from "antd/locale/zh_CN";
 import { useThemeStore } from "./hooks/useThemeStore";
 import Router from "./router";
@@ -24,7 +24,9 @@ function App() {
           : antdTheme.defaultAlgorithm,
       }}
     >
-      <Router />
+      <AntdApp>
+        <Router />
+      </AntdApp>
     </ConfigProvider>
   );
 }

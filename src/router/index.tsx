@@ -6,6 +6,7 @@ import Application from "../pages/Application";
 import System from "../pages/System";
 import Login from "../pages/Login";
 import Error404 from "../pages/Error/404";
+import Feedback from "../pages/Feedback";
 const Router = () => {
   return (
     <HashRouter>
@@ -16,6 +17,7 @@ const Router = () => {
           <Route path="/application" element={<Application />} />
           <Route path="/system" element={<System />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/feedback" element={<Feedback />} />
         </Route>
         <Route path="*" element={<Error404 />} />
       </Routes>

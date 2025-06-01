@@ -96,7 +96,6 @@ const Sidebar = () => {
   ];
 
   useEffect(() => {
-    console.log(pathname);
     if (pathname === "/") {
       setActiveKey("home");
     } else {
@@ -147,6 +146,7 @@ const Sidebar = () => {
             }}
             type="text"
             icon={<ContainerOutlined style={iconStyle} />}
+            onClick={() => navigate("/feedback")}
           />
         </Tooltip>
         <Tooltip placement="right" title={isDark ? "白天模式" : "夜间模式"}>

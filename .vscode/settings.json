@@ -2,12 +2,16 @@
   "cSpell.words": [
     "Appstore",
     "Avenir",
+    "cdylib",
     "icns",
     "njsproj",
     "ntvs",
+    "rlib",
     "serde",
     "Sider",
+    "staticlib",
     "tauri",
-    "vite"
+    "vite",
+    "wechat"
   ]
 }

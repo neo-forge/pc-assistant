@@ -1,10 +1,20 @@
-import { Avatar, Button, Flex, Space, Tooltip } from "antd";
+import {
+  Avatar,
+  Button,
+  Card,
+  Flex,
+  Popover,
+  Space,
+  Tooltip,
+  Typography,
+} from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   AppstoreOutlined,
   ContainerOutlined,
   GlobalOutlined,
   HomeOutlined,
+  LogoutOutlined,
   MoonOutlined,
   SettingOutlined,
   SunOutlined,
@@ -22,11 +32,39 @@ interface MenuItem {
   key: string;
 }
 
+const { Text } = Typography;
+
 const Sidebar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { isDark, setDark } = useThemeStore();
   const [activeKey, setActiveKey] = useState("home");
+
+  const handleLogout = () => {
+    console.log("用户已退出登录");
+  };
+
+  const content = (
+    <Card style={{ width: 300 }}>
+      <Space direction="vertical" align="center">
+        <Avatar size={64} icon={<UserOutlined />} />
+        <Text strong>航</Text>
+        <Text type="secondary" style={{ fontSize: 12 }}>
+          hang@example.com
+        </Text>
+        <Button
+          type="primary"
+          danger
+          block
+          icon={<LogoutOutlined />}
+          onClick={handleLogout}
+          style={{ marginTop: 8 }}
+        >
+          退出登录
+        </Button>
+      </Space>
+    </Card>
+  );
 
   const iconStyle: CSSProperties = {
     fontSize: 20,
@@ -166,7 +204,14 @@ const Sidebar = () => {
             onClick={() => setDark(!isDark)}
           />
         </Tooltip>
-        <Avatar size={48} icon={<UserOutlined />} />
+        <Popover
+          content={content}
+          trigger="hover"
+          placement="rightTop"
+          arrow={false}
+        >
+          <Avatar size={48} icon={<UserOutlined />} />
+        </Popover>
       </Space>
     </Flex>
   );

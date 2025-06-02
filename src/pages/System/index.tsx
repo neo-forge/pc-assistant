@@ -2,26 +2,31 @@ import { AppstoreOutlined, BarsOutlined } from "@ant-design/icons";
 import { Card, Segmented, Tabs, Tooltip } from "antd";
 import type { TabsProps } from "antd";
 
+import File from "../../components/System/File";
+import Process from "../../components/System/Process";
+import Clipboard from "../../components/System/Clipboard";
+import Shortcut from "../../components/System/Shortcut";
+
 const items: TabsProps["items"] = [
   {
     key: "1",
     label: "文件管理",
-    children: "Content of Tab Pane 1",
+    children: <File />,
   },
   {
     key: "2",
     label: "进程管理",
-    children: "Content of Tab Pane 2",
+    children: <Process />,
   },
   {
     key: "3",
     label: "剪贴板管理",
-    children: "Content of Tab Pane 3",
+    children: <Clipboard />,
   },
   {
     key: "4",
     label: "快捷键管理",
-    children: "Content of Tab Pane 4",
+    children: <Shortcut />,
   },
 ];
 

@@ -45,25 +45,27 @@ const Sidebar = () => {
   };
 
   const content = (
-    <Card style={{ width: 300 }}>
-      <Space direction="vertical" align="center">
+    <Flex vertical gap={10}>
+      <Flex align="center" gap={10}>
         <Avatar size={64} icon={<UserOutlined />} />
-        <Text strong>航</Text>
-        <Text type="secondary" style={{ fontSize: 12 }}>
-          hang@example.com
-        </Text>
-        <Button
-          type="primary"
-          danger
-          block
-          icon={<LogoutOutlined />}
-          onClick={handleLogout}
-          style={{ marginTop: 8 }}
-        >
-          退出登录
-        </Button>
-      </Space>
-    </Card>
+        <Space direction="vertical">
+          <Text strong>航</Text>
+          <Text type="secondary" style={{ fontSize: 12 }}>
+            hang@example.com
+          </Text>
+        </Space>
+      </Flex>
+      <Button
+        type="primary"
+        danger
+        block
+        icon={<LogoutOutlined />}
+        onClick={handleLogout}
+        style={{ marginTop: 8 }}
+      >
+        退出登录
+      </Button>
+    </Flex>
   );
 
   const iconStyle: CSSProperties = {
